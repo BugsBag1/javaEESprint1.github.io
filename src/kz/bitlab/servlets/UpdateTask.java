@@ -20,7 +20,6 @@ public class UpdateTask extends HttpServlet {
         String deadline = req.getParameter("deadline");
         String complete = req.getParameter("complete");
 
-        System.out.println("id ==" + id + " name == " + name + " Des== " + description + " Date == " + deadline + " complete ==" + complete);
 
         Task task = DBManager.getTaskById(id);
         if (task != null){
