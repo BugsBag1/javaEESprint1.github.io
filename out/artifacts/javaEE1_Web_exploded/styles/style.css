@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI";
+}
+
+.hidden{
+    display: none !important;
+}
+
+.content_width{
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.header{
+    height: 50px;
+    background-color: #2c8391;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 30px 10px 30px;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bold_text_logo{
+    margin-left: 5px;
+    margin-right: 5px;
+    color: white;
+    font-weight: 700;
+    font-family: 'Segoe UI';
+}
+
+.text_logo{
+    margin-left: 5px;
+    margin-right: 5px;
+    color: white;
+    font-family: 'Segoe UI';
+}
+
+.header_menu a{
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    font-weight: 500;
+}
+
+.header_menu{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.add_btn {
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    background: #2c8391;
+    width: 200px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+
+.table {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-top: 30px;
+}
+
+.table-row {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+
+.table-header {
+    background-color: #2c8391;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.table-cell {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+}
+
+.detail_btn{
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    background: #2c8391;
+    cursor: pointer;
+    padding: 10px 30px 10px 30px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Поверх других элементов */
+}
+
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+}
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+
+.close:hover {
+    color: red;
+}
+
+.input-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+input,
+textarea,
+select
+{
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+    resize: none; /* Убирает возможность изменения размера */
+}
+
+input:focus,
+textarea:focus,
+select:focus
+{
+    border-color: #007BFF;
+}
+
+.title_modal {
+    text-align: left;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn.close-btn {
+    background-color: #ccc;
+    color: #333;
+}
+
+.btn.close-btn:hover {
+    background-color: #b3b3b3;
+}
+
+.btn.add-btn {
+    background-color: #2c8391;
+    color: #fff;
+}
+
+.btn.add-btn:hover {
+    background-color: #256d79;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+
+.button-container-details {
+    display: flex;
+    justify-content: flex-start; /* Кнопки слева */
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.btn.delete-btn {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+.btn.delete-btn:hover {
+    background-color: #c9302c;
+}
+
+.btn.save-btn {
+    background-color: #5cb85c;
+    color: #fff;
+}
+
+.btn.save-btn:hover {
+    background-color: #4cae4c;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+
+
+#modalWaring {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    padding-top: 60px;
+}
+
+.modal-content-waring {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+
+#cancelBtn {
+    background-color: #ccc;
+}
+
+#saveBtn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.button-container-waring {
+    display: flex;
+    justify-content: center; /* Кнопки слева */
+    margin-top: 20px;
+    gap: 10px;
+}
